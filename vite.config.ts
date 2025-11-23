@@ -1,9 +1,14 @@
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// Explicitly declare process structure to avoid TS errors
+declare const process: { env: any; cwd: () => string };
+
 export default defineConfig(({ mode }) => {
-  // Fix: Cast process to any to resolve TS error "Property 'cwd' does not exist on type 'Process'"
-  const env = loadEnv(mode, (process as any).cwd(), '');
+  // Use a safe fallback for cwd if process.cwd is missing in some environments
+  const cwd = typeof process !== 'undefined' && process.cwd ? process.cwd() : '.';
+  const env = loadEnv(mode, cwd, '');
+  
   return {
     plugins: [react()],
     define: {
