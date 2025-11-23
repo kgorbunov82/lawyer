@@ -1,1 +1,0 @@
-import React from 'react'; export const NpvCalculator: React.FC = () => <div className="p-8 border rounded-xl"><h3>Калькулятор (Демо)</h3><p>Здесь будет график NPV</p></div>;
