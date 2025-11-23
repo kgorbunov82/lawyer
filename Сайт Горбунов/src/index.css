@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Кастомные стили для скроллбара */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thumb-brand-gold\/20::-webkit-scrollbar-thumb {
+  background-color: rgba(191, 161, 122, 0.2);
+  border-radius: 3px;
+}
+
+/* Анимация прогресс-бара в AI чате */
+@keyframes progress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
