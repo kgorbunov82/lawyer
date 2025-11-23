@@ -1,0 +1,1 @@
+@tailwind base; @tailwind components; @tailwind utilities; .scrollbar-thin::-webkit-scrollbar { width: 6px; } .scrollbar-thumb-brand-gold\/20::-webkit-scrollbar-thumb { background-color: rgba(191, 161, 122, 0.2); border-radius: 3px; }
