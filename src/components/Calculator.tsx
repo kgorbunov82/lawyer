@@ -1,2 +1,0 @@
-import React from 'react'; import { NpvCalculator } from './NpvCalculator';
-export const Calculator: React.FC = () => <section id="calculator" className="py-24 bg-brand-bg"><div className="container mx-auto px-6"><NpvCalculator /></div></section>;
